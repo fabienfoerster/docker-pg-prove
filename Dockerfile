@@ -7,8 +7,8 @@ RUN apt-get update && \
         libtest-simple-perl \
         postgresql-client \
         make \
-        curl && \
-    curl -L https://cpanmin.us | perl - App::pg_prove && \
+        curl \
+        pg_tap \
     apt-get remove -y curl make && \
     apt-get autoremove -y && \
     apt-get clean && \
